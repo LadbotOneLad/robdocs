@@ -25,7 +25,11 @@ Log "=== CONTRIBUTION ORCHESTRATOR START ==="
 Flow "git fetch upstream"
 Flow "git merge upstream/main"
 
+Flow "git add --all"
+Flow "git add -A"
 Flow "git add ."
+Flow "git status"
+
 Flow "git commit -m 'contribution forward flow'"
 
 $Tag = 'v' + (Get-Date -Format 'yyyyMMddHHmmss')
